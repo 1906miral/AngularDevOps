@@ -27,7 +27,7 @@ services:
   springboot:
     depends_on:
       - mysqldb
-    image: miralbarhoumi1/devopsproject:67
+    image: miralbarhoumi1/devopsproject:68
     container_name: springboot
     env_file: ./.env
     environment:
@@ -43,7 +43,7 @@ services:
     restart: on-failure
 
   angularf:
-    image: miralbarhoumi1/devopsprojectfront:48
+    image: miralbarhoumi1/devopsprojectfront:49
     container_name: angularf
     env_file: ./.env
     ports:
