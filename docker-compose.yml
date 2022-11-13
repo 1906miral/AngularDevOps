@@ -24,11 +24,11 @@ services:
     environment:
       PMA_HOST: mysqldb
 
-  springboot:
+  springboot-be:
     depends_on:
       - mysqldb
     image: miralbarhoumi1/devopsproject:latest
-    container_name: springboot
+    container_name: springboot-be
     env_file: ./.env
     environment:
       SPRING_APPLICATION_JSON: '{
@@ -49,7 +49,7 @@ services:
     ports:
       - $ANGULAR_LOCAL_PORT:$ANGULAR_DOCKER_PORT
     links:
-      - springboot
+      - springboot-be
 
 
 volumes:
